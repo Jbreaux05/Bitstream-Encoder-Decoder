@@ -1,0 +1,30 @@
+# Bitstream Encoder/Decoder - Custom Translation Table
+# 
+# Format:  <data_symbol> <code_word>
+#   - One mapping per line, fields separated by whitespace
+#   - Lines beginning with '#' are comments and are ignored
+#
+# Constraints:
+#   1. Binary only      — every symbol must contain only '0' and '1'
+#   2. Consistent width — all data symbols must be the same length (x bits);
+#                         all code words must be the same length (y bits)
+#   3. Full coverage    — all 2^x possible x-bit data symbols must be present
+#   4. Unique codes     — no two data symbols may share the same code word
+#
+# Sample table: 4-bit data -> 4-bit code
+0000 1111
+0001 1110
+0010 1101
+0011 1100
+0100 1011
+0101 1010
+0110 1001
+0111 1000
+1000 0111
+1001 0110
+1010 0101
+1011 0100
+1100 0011
+1101 0010
+1110 0001
+1111 0000
