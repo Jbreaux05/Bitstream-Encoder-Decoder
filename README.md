@@ -7,7 +7,6 @@ A Python command-line tool for encoding and decoding binary bitstreams using a c
 ## Table of Contents
 
 - [Overview](#overview)
-- [What is 4B/5B Encoding?](#what-is-4b5b-encoding)
 - [Files](#files)
 - [Requirements](#requirements)
 - [Usage](#usage)
@@ -26,33 +25,6 @@ The program operates in one of two modes chosen at runtime:
 |----------|-------------------------|-----------------------------------------------------|
 | Encoding | Raw bitstream           | Translation table, original bitstream, encoded bitstream |
 | Decoding | Encoded bitstream       | Translation table, encoded bitstream, decoded bitstream  |
-
----
-
-## What is 4B/5B Encoding?
-
-4B/5B is a line encoding scheme used in networking (e.g., Fast Ethernet / FDDI) to improve clock synchronisation and DC balance on a physical link. Every group of **4 data bits** is replaced by a **5-bit code word** chosen so that no code word contains more than one leading zero or more than two trailing zeros. This guarantees enough signal transitions for receivers to stay synchronised.
-
-The standard mapping used as the default table:
-
-| Data (4-bit) | Code (5-bit) |
-|:---:|:---:|
-| 0000 | 11110 |
-| 0001 | 01001 |
-| 0010 | 10100 |
-| 0011 | 10101 |
-| 0100 | 01010 |
-| 0101 | 01011 |
-| 0110 | 01110 |
-| 0111 | 01111 |
-| 1000 | 10010 |
-| 1001 | 10011 |
-| 1010 | 10110 |
-| 1011 | 10111 |
-| 1100 | 11010 |
-| 1101 | 11011 |
-| 1110 | 11100 |
-| 1111 | 11101 |
 
 ---
 
